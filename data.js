@@ -144,7 +144,8 @@ function iconAppender(objArray,node) {
 	let nameIcon = document.createElement("span");
     nameIcon.className = "bold";
     card.append(nameIcon);
-	nameIcon.append(iconInfo.name);
+	let iconName = iconInfo.name.toUpperCase();
+	nameIcon.append(iconName);
 
 
 	})

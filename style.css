@@ -16,7 +16,7 @@ div.logospace {
 
 div.filterspace {
     text-align: center;
-    padding: 2.5vh;
+    padding: 12px;
     color: white;
     background-color: #29b1dd;
 }
@@ -42,12 +42,17 @@ div.card {
     border-radius: 2vh;
     width: calc(95vw / 6);
     height: 7vw;
-    margin: auto auto 3vw;
+    margin: 2vw auto 5vw;
+    filter: drop-shadow(1px 1px 1px grey);
 }
 
 div.card > i {
     font-size: 3vw;
     margin-bottom: 0.5vw;
+}
+
+div.card > span {
+    font-size: 1vw;
 }
 
 .orange {
