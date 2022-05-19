@@ -14,9 +14,13 @@ div.logospace {
     color: #29b1dd;
 }
 
+#filter_cards{
+    margin-left: 5px;
+}
+
 div.filterspace {
     text-align: center;
-    padding: 12px;
+    padding: 22px;
     color: white;
     background-color: #29b1dd;
 }
@@ -29,7 +33,7 @@ div.cards_container {
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
-    margin: 2vh 0 auto;
+    margin: 2vw 0 auto;
 }
 /* 
 .cards_container::after {
@@ -43,12 +47,17 @@ div.card {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 0.8vw;
     width: calc(75% / 5);
     height: 7vw;
-    margin: 2vw 2.5% 5vw;
+    margin: 0 2.5% 5vw;
     filter: drop-shadow(1px 1px 1px grey);
+}
+
+div.card:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: 0.25s;
 }
 
 div.card > i {
