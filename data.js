@@ -100,13 +100,13 @@ const allIcon = [
 		family: 'fas',
 		color: 'blue'
 	},
-	{
-		name: 'user-graduate',
-		prefix: 'fa-',
-		type: 'user',
-		family: 'fas',
-		color: 'blue'
-	},
+	// {
+	// 	name: 'user-graduate',
+	// 	prefix: 'fa-',
+	// 	type: 'user',
+	// 	family: 'fas',
+	// 	color: 'blue'
+	// },
 	{
 		name: 'user-ninja',
 		prefix: 'fa-',
