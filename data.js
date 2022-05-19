@@ -123,13 +123,13 @@ const allIcon = [
 	}
 ];
 
-console.log(allIcon);
-
 const myNode = document.querySelector("div.cards_container");
 
 iconAppender(allIcon,myNode);
 
 function iconAppender(objArray,node) {
+
+	node.innerHTML = "";
 
 	objArray.forEach(iconInfo => {
 
@@ -146,43 +146,52 @@ function iconAppender(objArray,node) {
     card.append(nameIcon);
 	let iconName = iconInfo.name.toUpperCase();
 	nameIcon.append(iconName);
-
-
 	})
 }
 
-
-/*
-<div class="cards_container">
-	<div class="card">
-		<i class="fas fa-cat animal orange"></i>
-		<span class="bold">CAT</span>
-	</div>
-</div>
-	{
-		name: 'cat',
-		prefix: 'fa-',
-		type: 'animal',
-		family: 'fas',
-		color: 'orange'
-	},
-
-	iconAppender(allIcon,myNode);
-
-function iconAppender(objArray,node) {
-
-	for (let i = 0; i < objArray.length; i++) {
-		const iconInfo = objArray[i];
-			
-			let card = document.createElement("div");
-			card.className = "card";
-			node.append(card);
-			
-			let icon = document.createElement("i");
-			i.className = "";
-			card.append(icon);
-		
+const allAnimal = allIcon.filter((icons) => {
+	if (icons.type === "animal") {
+		return true;		
 	}
+})
 
-}
+
+const allVegetables = allIcon.filter((icons) => {
+	if (icons.type === "vegetable") {
+		return true;		
+	}
+})
+
+const allUser = allIcon.filter((icons) => {
+	if (icons.type === "user") {
+		return true;		
+	}
+})
+
+
+const iconFilter = document.getElementById("filter_cards");
+
+
+iconFilter.addEventListener ("click", 
+function(){
+
+		let selection = iconFilter.value;		
+		console.log(selection);
+
+		if (selection == "animals") {
+			iconAppender(allAnimal,myNode);
+		}
+		else if (selection == "vegetables") {
+			iconAppender(allVegetables,myNode);
+		}
+		else if (selection == "user") {
+			iconAppender(allUser,myNode);
+			
+		}
+		else {
+			iconAppender(allIcon,myNode);
+		}
+	})
+/*
+
 */
