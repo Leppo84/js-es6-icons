@@ -8,7 +8,7 @@
 
 // BONUS 2- popolare le options della select della milestone 3 dinamicamente.
 
-[
+const allIcon = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -122,3 +122,66 @@
 		color: 'blue'
 	}
 ];
+
+console.log(allIcon);
+
+const myNode = document.querySelector("div.cards_container");
+
+iconAppender(allIcon,myNode);
+
+function iconAppender(objArray,node) {
+
+	objArray.forEach(iconInfo => {
+
+    let card = document.createElement("div");
+    card.className = "card";
+    node.append(card);
+
+	let icon = document.createElement("i");
+	icon.className = iconInfo.family + " " + iconInfo.prefix + iconInfo.name + " " + iconInfo.type + " " + iconInfo.color;
+	card.append(icon);
+
+	let nameIcon = document.createElement("span");
+    nameIcon.className = "bold";
+    card.append(nameIcon);
+	nameIcon.append(iconInfo.name);
+
+
+	})
+}
+
+
+/*
+<div class="cards_container">
+	<div class="card">
+		<i class="fas fa-cat animal orange"></i>
+		<span class="bold">CAT</span>
+	</div>
+</div>
+	{
+		name: 'cat',
+		prefix: 'fa-',
+		type: 'animal',
+		family: 'fas',
+		color: 'orange'
+	},
+
+	iconAppender(allIcon,myNode);
+
+function iconAppender(objArray,node) {
+
+	for (let i = 0; i < objArray.length; i++) {
+		const iconInfo = objArray[i];
+			
+			let card = document.createElement("div");
+			card.className = "card";
+			node.append(card);
+			
+			let icon = document.createElement("i");
+			i.className = "";
+			card.append(icon);
+		
+	}
+
+}
+*/
