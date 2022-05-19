@@ -1,0 +1,17 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div.logospace {
+    color: #29b1dd;
+}
+
+div.filterspace {
+    background-color: #29b1dd;
+}
+
+main {
+    background-color: #dddddd;
+}
